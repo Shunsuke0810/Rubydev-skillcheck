@@ -536,3 +536,22 @@ Processing by EmployeesController#new as HTML
 Completed 200 OK in 48ms (Views: 32.6ms | ActiveRecord: 1.1ms | Allocations: 30725)
 
 
+Started GET "/employees/new" for ::1 at 2022-10-23 18:33:12 +0900
+Processing by EmployeesController#new as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:7:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/new.html.erb within layouts/application
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/views/employees/_form.html.erb:46
+  [1m[36mOffice Load (0.1ms)[0m  [1m[34mSELECT "offices".* FROM "offices"[0m
+  ↳ app/views/employees/_form.html.erb:51
+  Rendered employees/_form.html.erb (Duration: 11.5ms | Allocations: 5299)
+  Rendered employees/new.html.erb within layouts/application (Duration: 12.9ms | Allocations: 5641)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 4.0ms | Allocations: 2389)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 12224)
+Completed 200 OK in 32ms (Views: 26.6ms | ActiveRecord: 0.6ms | Allocations: 14164)
+
+
